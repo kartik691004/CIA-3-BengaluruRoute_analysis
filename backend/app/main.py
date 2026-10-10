@@ -9,7 +9,11 @@ from algorithms.graph import generate_graph
 from algorithms.tsp import nearest_neighbour, two_opt, brute_force
 
 app = FastAPI()
-graph_data = generate_graph(filepath="data/graph.json")
+# NOTE: no filepath here. Vercel (and most serverless hosts) mount the function
+# bundle read-only, so writing graph.json at import time crashed the whole app
+# with FUNCTION_INVOCATION_FAILED on every request. The graph is deterministic
+# (random.seed(42)), so it only ever needs to live in memory.
+graph_data = generate_graph(filepath=None)
 
 class RouteRequest(BaseModel):
     depot: str
@@ -78,6 +82,6 @@ def compute_route(req: RouteRequest):
 
 @app.get("/", response_class=HTMLResponse)
 def index():
-    html_path = os.path.join(os.path.dirname(__file__), "index.html")
-    with open(html_path, "r") as f:
+    html_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "index.html")
+    with open(html_path, "r", encoding="utf-8") as f:
         return f.read()

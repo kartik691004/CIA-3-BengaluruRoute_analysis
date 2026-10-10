@@ -91,8 +91,15 @@ def generate_graph(filepath="data/graph.json"):
     data = {"nodes": nodes, "edges": edges}
     
     if filepath:
-        os.makedirs(os.path.dirname(filepath), exist_ok=True)
-        with open(filepath, 'w') as f:
-            json.dump(data, f, indent=2)
+        # Best effort: serverless runtimes (e.g. Vercel) have a read-only
+        # filesystem, so never let caching the graph kill the process.
+        try:
+            directory = os.path.dirname(filepath)
+            if directory:
+                os.makedirs(directory, exist_ok=True)
+            with open(filepath, 'w', encoding='utf-8') as f:
+                json.dump(data, f, indent=2)
+        except OSError as e:
+            print(f"Warning: could not cache graph at {filepath}: {e}")
             
     return data
