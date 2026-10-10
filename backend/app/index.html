@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BengaluruRoute Prototype</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .controls { display: flex; gap: 20px; margin-bottom: 20px; align-items: flex-start; }
+        .control-group { display: flex; flex-direction: column; }
+        #map { height: 500px; width: 100%; border: 1px solid #ccc; }
+        .dimmed { opacity: 0.3 !important; }
+        table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .best { background-color: #d4edda; font-weight: bold; }
+        select[multiple] { height: 150px; }
+    </style>
+</head>
+<body>
+    <h2>BengaluruRoute</h2>
+    <p><em>Note: The generated tour is an <strong>Open Tour</strong> (it finishes at the last stop, not a round trip back to the depot).</em></p>
+    
+    <div class="controls">
+        <div class="control-group">
+            <label>Depot:</label>
+            <select id="depot"></select>
+        </div>
+        <div class="control-group">
+            <label>Stops (hold Ctrl):</label>
+            <select id="stops" multiple size="10"></select>
+        </div>
+        <div class="control-group">
+            <label>Algorithm:</label>
+            <select id="algo">
+                <option value="nearest_neighbour">Nearest Neighbour</option>
+                <option value="two_opt">NN + 2-Opt</option>
+                <option value="brute_force">Brute Force</option>
+            </select>
+        </div>
+        <div class="control-group">
+            <button onclick="computeRoute(false)" style="margin-top:20px; padding: 10px;">Compute Route</button>
+            <button onclick="computeRoute(true)" style="margin-top:10px; padding: 10px; background:#e0e0e0;">Compare All</button>
+            <div id="bf-warning" style="color:red; font-size: 12px; margin-top: 10px;"></div>
+        </div>
+    </div>
+    
+    <div id="map"></div>
+    <div id="results"></div>
+
+    <script>
+        let map = L.map('map').setView([12.9716, 77.5946], 11);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+        
+        let graph = null;
+        let routeLayer = L.layerGroup().addTo(map);
+        let markersLayer = L.layerGroup().addTo(map);
+        let allMarkers = {};
+        
+        fetch('/graph').then(r => r.json()).then(data => {
+            graph = data;
+            const depotSel = document.getElementById('depot');
+            const stopsSel = document.getElementById('stops');
+            for (let n in data.nodes) {
+                let m = L.marker([data.nodes[n][0], data.nodes[n][1]]).bindPopup(n);
+                allMarkers[n] = m;
+                markersLayer.addLayer(m);
+                
+                if(n === "Isolated_Test") {
+                    stopsSel.innerHTML += `<option value="${n}">${n} (Test Error)</option>`;
+                    depotSel.innerHTML += `<option value="${n}">${n}</option>`;
+                    continue;
+                }
+                
+                depotSel.innerHTML += `<option value="${n}">${n}</option>`;
+                stopsSel.innerHTML += `<option value="${n}">${n}</option>`;
+            }
+        });
+
+        document.getElementById('stops').addEventListener('change', function() {
+            let selected = document.querySelectorAll('#stops option:checked');
+            let w = document.getElementById('bf-warning');
+            if(selected.length > 8) w.innerText = "Brute Force disabled (N > 8)";
+            else w.innerText = "";
+        });
+
+        function drawPath(res) {
+            routeLayer.clearLayers();
+            markersLayer.clearLayers();
+            
+            let tour = res.tour;
+            let stopsSet = new Set(tour);
+            
+            for (let n in allMarkers) {
+                if (stopsSet.has(n)) {
+                    markersLayer.addLayer(allMarkers[n]);
+                    allMarkers[n].setOpacity(1.0);
+                } else {
+                    markersLayer.addLayer(allMarkers[n]);
+                    allMarkers[n].setOpacity(0.3);
+                }
+            }
+
+            let latlngs = [];
+            res.path_details.forEach(leg => {
+                leg.path.forEach(node => {
+                    latlngs.push([graph.nodes[node][0], graph.nodes[node][1]]);
+                });
+            });
+            L.polyline(latlngs, {color: 'red', weight: 4}).addTo(routeLayer);
+            
+            // Add custom numbered markers
+            tour.forEach((node, idx) => {
+                let iconHtml = idx === 0 ? "Depot" : idx.toString();
+                let color = idx === 0 ? "green" : "blue";
+                
+                let icon = L.divIcon({
+                    className: 'custom-icon',
+                    html: `<div style="background-color: ${color}; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; font-weight: bold; border: 2px solid white; box-shadow: 0 0 3px rgba(0,0,0,0.5);">${iconHtml}</div>`,
+                    iconSize: [25, 25],
+                    iconAnchor: [12, 12]
+                });
+                L.marker([graph.nodes[node][0], graph.nodes[node][1]], {icon: icon}).bindPopup(`<b>${node}</b><br/>Order: ${idx === 0 ? 'Depot' : idx}`).addTo(routeLayer);
+            });
+        }
+
+        function computeRoute(compareAll) {
+            const depot = document.getElementById('depot').value;
+            const stops = Array.from(document.getElementById('stops').selectedOptions).map(o => o.value);
+            let algo = document.getElementById('algo').value;
+            
+            if (compareAll) algo = "all";
+            
+            fetch('/route', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({depot, stops, algorithm: algo})
+            }).then(r => r.json()).then(res => {
+                if(res.detail) {
+                    return alert("Error: " + res.detail);
+                }
+                
+                let resDiv = document.getElementById('results');
+                
+                if (res.compare) {
+                    let bestCost = Math.min(...Object.values(res.results).map(r => r.cost));
+                    
+                    let tableHTML = `<h3>Comparison Results</h3><table><tr><th>Algorithm</th><th>Cost (Traffic Units)</th><th>Distance (km)</th><th>Est. Mins</th><th>Runtime (ms)</th><th>Nodes Expanded</th></tr>`;
+                    
+                    for (let [k, r] of Object.entries(res.results)) {
+                        let isBest = r.cost === bestCost ? 'class="best"' : '';
+                        tableHTML += `<tr ${isBest}>
+                            <td>${k}</td>
+                            <td>${r.cost.toFixed(2)}</td>
+                            <td>${r.distance_km.toFixed(2)}</td>
+                            <td>${r.estimated_minutes.toFixed(2)}</td>
+                            <td>${r.runtime_ms.toFixed(2)}</td>
+                            <td>${r.nodes_expanded}</td>
+                        </tr>`;
+                    }
+                    tableHTML += `</table>`;
+                    resDiv.innerHTML = tableHTML;
+                    
+                    // Draw best tour
+                    let bestAlgo = Object.values(res.results).find(r => r.cost === bestCost);
+                    drawPath(bestAlgo);
+                } else {
+                    drawPath(res);
+                    let fullPath = [];
+                    res.path_details.forEach(p => fullPath = fullPath.concat(p.path));
+                    
+                    resDiv.innerHTML = `
+                        <h3>Results Card</h3>
+                        <p><strong>Total Cost (Weighted):</strong> ${res.cost.toFixed(2)}</p>
+                        <p><strong>Total Distance:</strong> ${res.distance_km.toFixed(2)} km</p>
+                        <p><strong>Estimated Time:</strong> ${res.estimated_minutes.toFixed(2)} mins</p>
+                        <p><strong>Runtime:</strong> ${res.runtime_ms.toFixed(2)} ms</p>
+                        <p><strong>Nodes Expanded:</strong> ${res.nodes_expanded}</p>
+                        <p><strong>Visiting Order:</strong> ${res.tour.join(' &rarr; ')}</p>
+                        <p><strong>Per-leg Node Path:</strong> ${fullPath.join(' &rarr; ')}</p>
+                    `;
+                }
+            }).catch(err => {
+                alert("Request failed. Did you select stops?");
+            });
+        }
+    </script>
+</body>
+</html>

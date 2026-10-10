@@ -1,0 +1,1107 @@
+{
+  "nodes": {
+    "Majestic": [
+      12.9766,
+      77.5713
+    ],
+    "Indiranagar": [
+      12.9719,
+      77.6412
+    ],
+    "Koramangala": [
+      12.9279,
+      77.6271
+    ],
+    "Whitefield": [
+      12.9698,
+      77.7499
+    ],
+    "Electronic City": [
+      12.8452,
+      77.6602
+    ],
+    "Hebbal": [
+      13.0354,
+      77.5988
+    ],
+    "Jayanagar": [
+      12.9299,
+      77.5824
+    ],
+    "Yelahanka": [
+      13.1007,
+      77.5963
+    ],
+    "Marathahalli": [
+      12.9569,
+      77.7011
+    ],
+    "HSR Layout": [
+      12.9121,
+      77.6446
+    ],
+    "BTM Layout": [
+      12.9166,
+      77.6101
+    ],
+    "Malleshwaram": [
+      13.0031,
+      77.571
+    ],
+    "Banashankari": [
+      12.9152,
+      77.5736
+    ],
+    "JP Nagar": [
+      12.9063,
+      77.5857
+    ],
+    "Bannerghatta Road": [
+      12.8988,
+      77.5996
+    ],
+    "CHRIST University Hosur Rd": [
+      12.9345,
+      77.6059
+    ],
+    "KR Puram": [
+      13.0084,
+      77.6953
+    ],
+    "Silk Board": [
+      12.9176,
+      77.6238
+    ],
+    "Yeshwanthpur": [
+      13.0279,
+      77.5409
+    ],
+    "Basavanagudi": [
+      12.9421,
+      77.575
+    ],
+    "Domlur": [
+      12.9609,
+      77.6387
+    ],
+    "Ulsoor": [
+      12.9782,
+      77.6247
+    ],
+    "Shivajinagar": [
+      12.9868,
+      77.6041
+    ],
+    "Madiwala": [
+      12.9226,
+      77.6174
+    ],
+    "Bellandur": [
+      12.9304,
+      77.6784
+    ],
+    "Sarjapur Road": [
+      12.9127,
+      77.6653
+    ],
+    "Kalyan Nagar": [
+      13.028,
+      77.6399
+    ],
+    "Kammanahalli": [
+      13.0117,
+      77.6385
+    ],
+    "RT Nagar": [
+      13.0238,
+      77.5947
+    ],
+    "Sanjaynagar": [
+      13.0353,
+      77.5804
+    ],
+    "Peenya": [
+      13.0329,
+      77.5274
+    ],
+    "Rajajinagar": [
+      12.9982,
+      77.553
+    ],
+    "Vijayanagar": [
+      12.9716,
+      77.5273
+    ],
+    "Kengeri": [
+      12.903,
+      77.4811
+    ],
+    "Nagarbhavi": [
+      12.9669,
+      77.5118
+    ],
+    "RR Nagar": [
+      12.926,
+      77.5174
+    ],
+    "Padmanabhanagar": [
+      12.9163,
+      77.5583
+    ],
+    "Nayandahalli": [
+      12.9413,
+      77.528
+    ],
+    "Bommanahalli": [
+      12.9048,
+      77.6253
+    ],
+    "Kudlu Gate": [
+      12.8931,
+      77.6438
+    ],
+    "Isolated_Test": [
+      12.0,
+      77.0
+    ]
+  },
+  "edges": {
+    "Majestic": {
+      "Malleshwaram": {
+        "distance_km": 2.946844831921532,
+        "weight": 3.9758427625086834
+      },
+      "Rajajinagar": {
+        "distance_km": 3.1145217297376298,
+        "weight": 4.628908354788315
+      },
+      "Shivajinagar": {
+        "distance_km": 3.730568780310487,
+        "weight": 3.9942250991118415
+      },
+      "Basavanagudi": {
+        "distance_km": 3.8571202429439206,
+        "weight": 5.148546227778339
+      },
+      "Vijayanagar": {
+        "distance_km": 4.799984919871039,
+        "weight": 5.217044808350719
+      },
+      "Yeshwanthpur": {
+        "distance_km": 6.586897610491159,
+        "weight": 7.418299722734423
+      }
+    },
+    "Indiranagar": {
+      "Domlur": {
+        "distance_km": 1.2527841248309155,
+        "weight": 2.307693754829236
+      },
+      "Ulsoor": {
+        "distance_km": 1.920215215353493,
+        "weight": 3.070617605839186
+      },
+      "Shivajinagar": {
+        "distance_km": 4.347973091418737,
+        "weight": 10.16673222106014
+      },
+      "Kammanahalli": {
+        "distance_km": 4.435216416785968,
+        "weight": 10.26211242656941
+      },
+      "KR Puram": {
+        "distance_km": 7.1296458635958455,
+        "weight": 7.456100631986535
+      }
+    },
+    "Koramangala": {
+      "Silk Board": {
+        "distance_km": 1.1998512360703937,
+        "weight": 1.681725067549419
+      },
+      "Madiwala": {
+        "distance_km": 1.2051828829766287,
+        "weight": 1.3200266390502904
+      },
+      "BTM Layout": {
+        "distance_km": 2.2301089284277675,
+        "weight": 2.9614886779820893
+      },
+      "CHRIST University Hosur Rd": {
+        "distance_km": 2.4119125301868327,
+        "weight": 4.426883628728455
+      },
+      "Domlur": {
+        "distance_km": 3.878787599434704,
+        "weight": 7.280014933958193
+      }
+    },
+    "Whitefield": {
+      "Marathahalli": {
+        "distance_km": 5.479111175705473,
+        "weight": 13.476825362217282
+      },
+      "KR Puram": {
+        "distance_km": 7.308910123613227,
+        "weight": 9.4888399007019
+      },
+      "Bellandur": {
+        "distance_km": 8.901056973867894,
+        "weight": 17.578044584526356
+      },
+      "Sarjapur Road": {
+        "distance_km": 11.152028537752276,
+        "weight": 20.267832952390354
+      }
+    },
+    "Electronic City": {
+      "Kudlu Gate": {
+        "distance_km": 5.615099172194537,
+        "weight": 7.471793103702684
+      },
+      "Sarjapur Road": {
+        "distance_km": 7.525989223799767,
+        "weight": 14.178200004007401
+      },
+      "HSR Layout": {
+        "distance_km": 7.6287177114754,
+        "weight": 16.891092403074037
+      },
+      "Bommanahalli": {
+        "distance_km": 7.630998113498536,
+        "weight": 7.705386147763582
+      },
+      "Silk Board": {
+        "distance_km": 8.965421564623602,
+        "weight": 9.092718153472514
+      }
+    },
+    "Hebbal": {
+      "RT Nagar": {
+        "distance_km": 1.3641925133503912,
+        "weight": 2.3885362549159757
+      },
+      "Sanjaynagar": {
+        "distance_km": 1.9932948198247038,
+        "weight": 2.88562750502204
+      },
+      "Kalyan Nagar": {
+        "distance_km": 4.527806045432811,
+        "weight": 8.881032105184525
+      },
+      "Malleshwaram": {
+        "distance_km": 4.687242818281858,
+        "weight": 5.7803980716061005
+      },
+      "Yelahanka": {
+        "distance_km": 7.266076251242494,
+        "weight": 16.50301428381112
+      }
+    },
+    "Jayanagar": {
+      "Basavanagudi": {
+        "distance_km": 1.5758943164849966,
+        "weight": 3.737739839725759
+      },
+      "Banashankari": {
+        "distance_km": 1.8924614288295358,
+        "weight": 2.943291231762809
+      },
+      "CHRIST University Hosur Rd": {
+        "distance_km": 2.5976579113920613,
+        "weight": 5.265248349395459
+      },
+      "JP Nagar": {
+        "distance_km": 2.6484608683998236,
+        "weight": 5.222905407145835
+      },
+      "Padmanabhanagar": {
+        "distance_km": 3.018118050565257,
+        "weight": 3.9769660309483723
+      }
+    },
+    "Yelahanka": {
+      "Hebbal": {
+        "distance_km": 7.266076251242494,
+        "weight": 16.50301428381112
+      },
+      "Sanjaynagar": {
+        "distance_km": 7.473296103019525,
+        "weight": 14.24103119927797
+      },
+      "RT Nagar": {
+        "distance_km": 8.552645975734851,
+        "weight": 18.907269543217772
+      },
+      "Kalyan Nagar": {
+        "distance_km": 9.362267743452968,
+        "weight": 19.61018429535672
+      }
+    },
+    "Marathahalli": {
+      "Whitefield": {
+        "distance_km": 5.479111175705473,
+        "weight": 13.476825362217282
+      },
+      "Bellandur": {
+        "distance_km": 3.838539209443072,
+        "weight": 6.8850784493558175
+      },
+      "KR Puram": {
+        "distance_km": 5.760919089809187,
+        "weight": 13.044321665164892
+      },
+      "Sarjapur Road": {
+        "distance_km": 6.261630068881251,
+        "weight": 11.44664139291819
+      }
+    },
+    "HSR Layout": {
+      "Electronic City": {
+        "distance_km": 7.6287177114754,
+        "weight": 16.891092403074037
+      },
+      "Kudlu Gate": {
+        "distance_km": 2.1144822378615395,
+        "weight": 3.1867961119188815
+      },
+      "Bommanahalli": {
+        "distance_km": 2.2437994247941075,
+        "weight": 3.000063058170372
+      },
+      "Sarjapur Road": {
+        "distance_km": 2.244522453555808,
+        "weight": 2.283176570866446
+      },
+      "Silk Board": {
+        "distance_km": 2.3358296827335634,
+        "weight": 4.3587241001545305
+      },
+      "Bellandur": {
+        "distance_km": 4.190449113985708,
+        "weight": 10.294330904608207
+      }
+    },
+    "BTM Layout": {
+      "Koramangala": {
+        "distance_km": 2.2301089284277675,
+        "weight": 2.9614886779820893
+      },
+      "Madiwala": {
+        "distance_km": 1.0349258583844867,
+        "weight": 1.690282257408081
+      },
+      "Silk Board": {
+        "distance_km": 1.4889786244475143,
+        "weight": 3.594937238590726
+      },
+      "CHRIST University Hosur Rd": {
+        "distance_km": 2.0417743857652475,
+        "weight": 4.001877060614242
+      },
+      "Bommanahalli": {
+        "distance_km": 2.1060977736438775,
+        "weight": 3.74119576338925
+      },
+      "JP Nagar": {
+        "distance_km": 2.8819122724024644,
+        "weight": 5.5151054535012864
+      },
+      "Bannerghatta Road": {
+        "distance_km": 2.2831235451680736,
+        "weight": 4.780153384888243
+      }
+    },
+    "Malleshwaram": {
+      "Majestic": {
+        "distance_km": 2.946844831921532,
+        "weight": 3.9758427625086834
+      },
+      "Hebbal": {
+        "distance_km": 4.687242818281858,
+        "weight": 5.7803980716061005
+      },
+      "Rajajinagar": {
+        "distance_km": 2.024886859557806,
+        "weight": 2.0266238969895634
+      },
+      "RT Nagar": {
+        "distance_km": 3.448296091080349,
+        "weight": 8.168812607616124
+      },
+      "Sanjaynagar": {
+        "distance_km": 3.722482856729109,
+        "weight": 7.122804615235055
+      },
+      "Yeshwanthpur": {
+        "distance_km": 4.270660692000918,
+        "weight": 8.469394907839504
+      },
+      "Shivajinagar": {
+        "distance_km": 4.01827940062118,
+        "weight": 4.6791806632973
+      },
+      "Peenya": {
+        "distance_km": 5.769874365589635,
+        "weight": 10.359985452432559
+      }
+    },
+    "Banashankari": {
+      "Jayanagar": {
+        "distance_km": 1.8924614288295358,
+        "weight": 2.943291231762809
+      },
+      "JP Nagar": {
+        "distance_km": 1.6429436106102355,
+        "weight": 2.3008878709755765
+      },
+      "Padmanabhanagar": {
+        "distance_km": 1.6627445079645022,
+        "weight": 2.718099937235157
+      },
+      "Basavanagudi": {
+        "distance_km": 2.994989236788524,
+        "weight": 5.056373776458124
+      }
+    },
+    "JP Nagar": {
+      "Jayanagar": {
+        "distance_km": 2.6484608683998236,
+        "weight": 5.222905407145835
+      },
+      "Banashankari": {
+        "distance_km": 1.6429436106102355,
+        "weight": 2.3008878709755765
+      },
+      "Bannerghatta Road": {
+        "distance_km": 1.7220018123032927,
+        "weight": 2.1640534058316807
+      },
+      "BTM Layout": {
+        "distance_km": 2.8819122724024644,
+        "weight": 5.5151054535012864
+      },
+      "Padmanabhanagar": {
+        "distance_km": 3.1710586028180496,
+        "weight": 5.7362678555033915
+      }
+    },
+    "Bannerghatta Road": {
+      "JP Nagar": {
+        "distance_km": 1.7220018123032927,
+        "weight": 2.1640534058316807
+      },
+      "BTM Layout": {
+        "distance_km": 2.2831235451680736,
+        "weight": 4.780153384888243
+      },
+      "Bommanahalli": {
+        "distance_km": 2.8643470794797183,
+        "weight": 3.566409263159742
+      },
+      "Madiwala": {
+        "distance_km": 3.274993071385596,
+        "weight": 5.139063985369381
+      }
+    },
+    "CHRIST University Hosur Rd": {
+      "Koramangala": {
+        "distance_km": 2.4119125301868327,
+        "weight": 4.426883628728455
+      },
+      "Jayanagar": {
+        "distance_km": 2.5976579113920613,
+        "weight": 5.265248349395459
+      },
+      "BTM Layout": {
+        "distance_km": 2.0417743857652475,
+        "weight": 4.001877060614242
+      },
+      "Madiwala": {
+        "distance_km": 1.8177560401554465,
+        "weight": 2.85829218478605
+      },
+      "Basavanagudi": {
+        "distance_km": 3.4536784578845725,
+        "weight": 4.731336623551281
+      },
+      "Domlur": {
+        "distance_km": 4.609950376781448,
+        "weight": 10.818328787600814
+      }
+    },
+    "KR Puram": {
+      "Whitefield": {
+        "distance_km": 7.308910123613227,
+        "weight": 9.4888399007019
+      },
+      "Marathahalli": {
+        "distance_km": 5.760919089809187,
+        "weight": 13.044321665164892
+      },
+      "Kammanahalli": {
+        "distance_km": 6.1646776953854685,
+        "weight": 13.340361714880816
+      },
+      "Kalyan Nagar": {
+        "distance_km": 6.385323200434499,
+        "weight": 8.579142152325277
+      },
+      "Indiranagar": {
+        "distance_km": 7.1296458635958455,
+        "weight": 7.456100631986535
+      }
+    },
+    "Silk Board": {
+      "Koramangala": {
+        "distance_km": 1.1998512360703937,
+        "weight": 1.681725067549419
+      },
+      "HSR Layout": {
+        "distance_km": 2.3358296827335634,
+        "weight": 4.3587241001545305
+      },
+      "BTM Layout": {
+        "distance_km": 1.4889786244475143,
+        "weight": 3.594937238590726
+      },
+      "Madiwala": {
+        "distance_km": 0.8889495079446472,
+        "weight": 1.945127349749996
+      },
+      "Bommanahalli": {
+        "distance_km": 1.432550038650626,
+        "weight": 2.3739504768674737
+      },
+      "Kudlu Gate": {
+        "distance_km": 3.4814801041895946,
+        "weight": 4.631503768036758
+      },
+      "Electronic City": {
+        "distance_km": 8.965421564623602,
+        "weight": 9.092718153472514
+      }
+    },
+    "Yeshwanthpur": {
+      "Peenya": {
+        "distance_km": 1.564592718405745,
+        "weight": 3.3541209866607256
+      },
+      "Rajajinagar": {
+        "distance_km": 3.5531548279036644,
+        "weight": 3.6569606497637483
+      },
+      "Malleshwaram": {
+        "distance_km": 4.270660692000918,
+        "weight": 8.469394907839504
+      },
+      "Sanjaynagar": {
+        "distance_km": 4.35747799112473,
+        "weight": 5.356468614451684
+      },
+      "Majestic": {
+        "distance_km": 6.586897610491159,
+        "weight": 7.418299722734423
+      }
+    },
+    "Basavanagudi": {
+      "Majestic": {
+        "distance_km": 3.8571202429439206,
+        "weight": 5.148546227778339
+      },
+      "Jayanagar": {
+        "distance_km": 1.5758943164849966,
+        "weight": 3.737739839725759
+      },
+      "Banashankari": {
+        "distance_km": 2.994989236788524,
+        "weight": 5.056373776458124
+      },
+      "Padmanabhanagar": {
+        "distance_km": 3.3920249217553198,
+        "weight": 7.105941488030376
+      },
+      "CHRIST University Hosur Rd": {
+        "distance_km": 3.4536784578845725,
+        "weight": 4.731336623551281
+      }
+    },
+    "Domlur": {
+      "Indiranagar": {
+        "distance_km": 1.2527841248309155,
+        "weight": 2.307693754829236
+      },
+      "Ulsoor": {
+        "distance_km": 2.4498678308815403,
+        "weight": 6.115620769251949
+      },
+      "Koramangala": {
+        "distance_km": 3.878787599434704,
+        "weight": 7.280014933958193
+      },
+      "CHRIST University Hosur Rd": {
+        "distance_km": 4.609950376781448,
+        "weight": 10.818328787600814
+      },
+      "Bellandur": {
+        "distance_km": 5.47824263612332,
+        "weight": 12.551582733759165
+      }
+    },
+    "Ulsoor": {
+      "Indiranagar": {
+        "distance_km": 1.920215215353493,
+        "weight": 3.070617605839186
+      },
+      "Domlur": {
+        "distance_km": 2.4498678308815403,
+        "weight": 6.115620769251949
+      },
+      "Shivajinagar": {
+        "distance_km": 2.428286668974598,
+        "weight": 2.7594178394735094
+      },
+      "Kammanahalli": {
+        "distance_km": 4.013906631563732,
+        "weight": 9.756698746715697
+      },
+      "Kalyan Nagar": {
+        "distance_km": 5.777197868417764,
+        "weight": 9.544785187559265
+      }
+    },
+    "Shivajinagar": {
+      "Majestic": {
+        "distance_km": 3.730568780310487,
+        "weight": 3.9942250991118415
+      },
+      "Indiranagar": {
+        "distance_km": 4.347973091418737,
+        "weight": 10.16673222106014
+      },
+      "Ulsoor": {
+        "distance_km": 2.428286668974598,
+        "weight": 2.7594178394735094
+      },
+      "Malleshwaram": {
+        "distance_km": 4.01827940062118,
+        "weight": 4.6791806632973
+      },
+      "RT Nagar": {
+        "distance_km": 4.238387037074816,
+        "weight": 9.772778969968405
+      },
+      "Kammanahalli": {
+        "distance_km": 4.6429644068360645,
+        "weight": 6.477323388517544
+      }
+    },
+    "Madiwala": {
+      "Koramangala": {
+        "distance_km": 1.2051828829766287,
+        "weight": 1.3200266390502904
+      },
+      "BTM Layout": {
+        "distance_km": 1.0349258583844867,
+        "weight": 1.690282257408081
+      },
+      "Bannerghatta Road": {
+        "distance_km": 3.274993071385596,
+        "weight": 5.139063985369381
+      },
+      "CHRIST University Hosur Rd": {
+        "distance_km": 1.8177560401554465,
+        "weight": 2.85829218478605
+      },
+      "Silk Board": {
+        "distance_km": 0.8889495079446472,
+        "weight": 1.945127349749996
+      },
+      "Bommanahalli": {
+        "distance_km": 2.1565307837908456,
+        "weight": 2.5479546938275037
+      }
+    },
+    "Bellandur": {
+      "Whitefield": {
+        "distance_km": 8.901056973867894,
+        "weight": 17.578044584526356
+      },
+      "Marathahalli": {
+        "distance_km": 3.838539209443072,
+        "weight": 6.8850784493558175
+      },
+      "Sarjapur Road": {
+        "distance_km": 2.426798988809826,
+        "weight": 5.050369462464573
+      },
+      "HSR Layout": {
+        "distance_km": 4.190449113985708,
+        "weight": 10.294330904608207
+      },
+      "Domlur": {
+        "distance_km": 5.47824263612332,
+        "weight": 12.551582733759165
+      }
+    },
+    "Sarjapur Road": {
+      "Whitefield": {
+        "distance_km": 11.152028537752276,
+        "weight": 20.267832952390354
+      },
+      "Electronic City": {
+        "distance_km": 7.525989223799767,
+        "weight": 14.178200004007401
+      },
+      "Marathahalli": {
+        "distance_km": 6.261630068881251,
+        "weight": 11.44664139291819
+      },
+      "HSR Layout": {
+        "distance_km": 2.244522453555808,
+        "weight": 2.283176570866446
+      },
+      "Bellandur": {
+        "distance_km": 2.426798988809826,
+        "weight": 5.050369462464573
+      },
+      "Kudlu Gate": {
+        "distance_km": 3.1906569687769744,
+        "weight": 4.291982731543252
+      },
+      "Bommanahalli": {
+        "distance_km": 4.423488240170644,
+        "weight": 7.98641115299642
+      }
+    },
+    "Kalyan Nagar": {
+      "Hebbal": {
+        "distance_km": 4.527806045432811,
+        "weight": 8.881032105184525
+      },
+      "Yelahanka": {
+        "distance_km": 9.362267743452968,
+        "weight": 19.61018429535672
+      },
+      "KR Puram": {
+        "distance_km": 6.385323200434499,
+        "weight": 8.579142152325277
+      },
+      "Kammanahalli": {
+        "distance_km": 1.8188122583639954,
+        "weight": 3.056669616836855
+      },
+      "RT Nagar": {
+        "distance_km": 4.9189031900566595,
+        "weight": 5.741974703894426
+      },
+      "Ulsoor": {
+        "distance_km": 5.777197868417764,
+        "weight": 9.544785187559265
+      }
+    },
+    "Kammanahalli": {
+      "Indiranagar": {
+        "distance_km": 4.435216416785968,
+        "weight": 10.26211242656941
+      },
+      "KR Puram": {
+        "distance_km": 6.1646776953854685,
+        "weight": 13.340361714880816
+      },
+      "Ulsoor": {
+        "distance_km": 4.013906631563732,
+        "weight": 9.756698746715697
+      },
+      "Kalyan Nagar": {
+        "distance_km": 1.8188122583639954,
+        "weight": 3.056669616836855
+      },
+      "Shivajinagar": {
+        "distance_km": 4.6429644068360645,
+        "weight": 6.477323388517544
+      }
+    },
+    "RT Nagar": {
+      "Hebbal": {
+        "distance_km": 1.3641925133503912,
+        "weight": 2.3885362549159757
+      },
+      "Yelahanka": {
+        "distance_km": 8.552645975734851,
+        "weight": 18.907269543217772
+      },
+      "Malleshwaram": {
+        "distance_km": 3.448296091080349,
+        "weight": 8.168812607616124
+      },
+      "Shivajinagar": {
+        "distance_km": 4.238387037074816,
+        "weight": 9.772778969968405
+      },
+      "Kalyan Nagar": {
+        "distance_km": 4.9189031900566595,
+        "weight": 5.741974703894426
+      },
+      "Sanjaynagar": {
+        "distance_km": 2.00874155077033,
+        "weight": 3.933968149541917
+      }
+    },
+    "Sanjaynagar": {
+      "Hebbal": {
+        "distance_km": 1.9932948198247038,
+        "weight": 2.88562750502204
+      },
+      "Yelahanka": {
+        "distance_km": 7.473296103019525,
+        "weight": 14.24103119927797
+      },
+      "Malleshwaram": {
+        "distance_km": 3.722482856729109,
+        "weight": 7.122804615235055
+      },
+      "Yeshwanthpur": {
+        "distance_km": 4.35747799112473,
+        "weight": 5.356468614451684
+      },
+      "RT Nagar": {
+        "distance_km": 2.00874155077033,
+        "weight": 3.933968149541917
+      },
+      "Peenya": {
+        "distance_km": 5.747694117647579,
+        "weight": 12.460654364251841
+      }
+    },
+    "Peenya": {
+      "Yeshwanthpur": {
+        "distance_km": 1.564592718405745,
+        "weight": 3.3541209866607256
+      },
+      "Rajajinagar": {
+        "distance_km": 4.7518222623694015,
+        "weight": 8.596372187135882
+      },
+      "Sanjaynagar": {
+        "distance_km": 5.747694117647579,
+        "weight": 12.460654364251841
+      },
+      "Malleshwaram": {
+        "distance_km": 5.769874365589635,
+        "weight": 10.359985452432559
+      }
+    },
+    "Rajajinagar": {
+      "Majestic": {
+        "distance_km": 3.1145217297376298,
+        "weight": 4.628908354788315
+      },
+      "Malleshwaram": {
+        "distance_km": 2.024886859557806,
+        "weight": 2.0266238969895634
+      },
+      "Yeshwanthpur": {
+        "distance_km": 3.5531548279036644,
+        "weight": 3.6569606497637483
+      },
+      "Peenya": {
+        "distance_km": 4.7518222623694015,
+        "weight": 8.596372187135882
+      },
+      "Vijayanagar": {
+        "distance_km": 4.062350306580501,
+        "weight": 5.936195458991505
+      },
+      "Nagarbhavi": {
+        "distance_km": 5.660532710638695,
+        "weight": 6.750678837490266
+      }
+    },
+    "Vijayanagar": {
+      "Rajajinagar": {
+        "distance_km": 4.062350306580501,
+        "weight": 5.936195458991505
+      },
+      "Nagarbhavi": {
+        "distance_km": 1.758986691819994,
+        "weight": 1.9416025401598425
+      },
+      "Nayandahalli": {
+        "distance_km": 3.3700600719521123,
+        "weight": 8.400629740719683
+      },
+      "Majestic": {
+        "distance_km": 4.799984919871039,
+        "weight": 5.217044808350719
+      }
+    },
+    "Kengeri": {
+      "RR Nagar": {
+        "distance_km": 4.6924658056647885,
+        "weight": 10.833259125201861
+      },
+      "Nayandahalli": {
+        "distance_km": 6.631264556138913,
+        "weight": 16.050472995728903
+      },
+      "Nagarbhavi": {
+        "distance_km": 7.845726077514818,
+        "weight": 8.853746361292
+      },
+      "Padmanabhanagar": {
+        "distance_km": 8.496959291384787,
+        "weight": 14.691121065588536
+      }
+    },
+    "Nagarbhavi": {
+      "Vijayanagar": {
+        "distance_km": 1.758986691819994,
+        "weight": 1.9416025401598425
+      },
+      "Kengeri": {
+        "distance_km": 7.845726077514818,
+        "weight": 8.853746361292
+      },
+      "Nayandahalli": {
+        "distance_km": 3.344383621938676,
+        "weight": 4.908131910915944
+      },
+      "RR Nagar": {
+        "distance_km": 4.588183364748551,
+        "weight": 6.412375988177214
+      },
+      "Rajajinagar": {
+        "distance_km": 5.660532710638695,
+        "weight": 6.750678837490266
+      }
+    },
+    "RR Nagar": {
+      "Kengeri": {
+        "distance_km": 4.6924658056647885,
+        "weight": 10.833259125201861
+      },
+      "Nagarbhavi": {
+        "distance_km": 4.588183364748551,
+        "weight": 6.412375988177214
+      },
+      "Nayandahalli": {
+        "distance_km": 2.0528075810825293,
+        "weight": 2.6721942228862994
+      },
+      "Padmanabhanagar": {
+        "distance_km": 4.562051748989445,
+        "weight": 8.324400416945881
+      }
+    },
+    "Padmanabhanagar": {
+      "Banashankari": {
+        "distance_km": 1.6627445079645022,
+        "weight": 2.718099937235157
+      },
+      "Basavanagudi": {
+        "distance_km": 3.3920249217553198,
+        "weight": 7.105941488030376
+      },
+      "Kengeri": {
+        "distance_km": 8.496959291384787,
+        "weight": 14.691121065588536
+      },
+      "RR Nagar": {
+        "distance_km": 4.562051748989445,
+        "weight": 8.324400416945881
+      },
+      "Jayanagar": {
+        "distance_km": 3.018118050565257,
+        "weight": 3.9769660309483723
+      },
+      "JP Nagar": {
+        "distance_km": 3.1710586028180496,
+        "weight": 5.7362678555033915
+      },
+      "Nayandahalli": {
+        "distance_km": 4.302440156938781,
+        "weight": 8.496532335390821
+      }
+    },
+    "Nayandahalli": {
+      "Vijayanagar": {
+        "distance_km": 3.3700600719521123,
+        "weight": 8.400629740719683
+      },
+      "Kengeri": {
+        "distance_km": 6.631264556138913,
+        "weight": 16.050472995728903
+      },
+      "Nagarbhavi": {
+        "distance_km": 3.344383621938676,
+        "weight": 4.908131910915944
+      },
+      "RR Nagar": {
+        "distance_km": 2.0528075810825293,
+        "weight": 2.6721942228862994
+      },
+      "Padmanabhanagar": {
+        "distance_km": 4.302440156938781,
+        "weight": 8.496532335390821
+      }
+    },
+    "Bommanahalli": {
+      "Electronic City": {
+        "distance_km": 7.630998113498536,
+        "weight": 7.705386147763582
+      },
+      "HSR Layout": {
+        "distance_km": 2.2437994247941075,
+        "weight": 3.000063058170372
+      },
+      "BTM Layout": {
+        "distance_km": 2.1060977736438775,
+        "weight": 3.74119576338925
+      },
+      "Bannerghatta Road": {
+        "distance_km": 2.8643470794797183,
+        "weight": 3.566409263159742
+      },
+      "Silk Board": {
+        "distance_km": 1.432550038650626,
+        "weight": 2.3739504768674737
+      },
+      "Sarjapur Road": {
+        "distance_km": 4.423488240170644,
+        "weight": 7.98641115299642
+      },
+      "Madiwala": {
+        "distance_km": 2.1565307837908456,
+        "weight": 2.5479546938275037
+      },
+      "Kudlu Gate": {
+        "distance_km": 2.3902636323880473,
+        "weight": 4.499583033905763
+      }
+    },
+    "Kudlu Gate": {
+      "Electronic City": {
+        "distance_km": 5.615099172194537,
+        "weight": 7.471793103702684
+      },
+      "HSR Layout": {
+        "distance_km": 2.1144822378615395,
+        "weight": 3.1867961119188815
+      },
+      "Sarjapur Road": {
+        "distance_km": 3.1906569687769744,
+        "weight": 4.291982731543252
+      },
+      "Bommanahalli": {
+        "distance_km": 2.3902636323880473,
+        "weight": 4.499583033905763
+      },
+      "Silk Board": {
+        "distance_km": 3.4814801041895946,
+        "weight": 4.631503768036758
+      }
+    },
+    "Isolated_Test": {}
+  }
+}
